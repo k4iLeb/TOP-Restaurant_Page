@@ -1,5 +1,0 @@
-// Title
-
-// Category Name
-
-// Cards

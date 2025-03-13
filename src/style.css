@@ -1,3 +1,5 @@
+@import "modern-normalize/modern-normalize.css";
+
 @font-face {
   font-family: "Bagel Fat One";
   src: url("./fonts/BagelFatOne-Regular.woff2") format("woff2"),
@@ -18,12 +20,10 @@
 
 :root {
   font-size: 1rem;
-  --bg-main: #e1c699;
-  --bg-card: #b8dab9;
-  /* **** COLOR THEME **** */
-  /* bg: #232323 */
-  /* fonts: #F7C93D */
-  /* fonts:hover: #FFFFFF */
+  --bg-main: #232323;
+  --bg-alt: #e1c699;
+  --font-main: #f7c93d;
+  --font-alt: #ffffff;
 }
 
 * {
@@ -33,10 +33,18 @@
 }
 
 body {
-  background-color: blue;
+  background-color: var(--bg-main);
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+header,
+footer {
+  background-color: var(--bg-alt);
+  width: 100%;
 }
 
 nav {
@@ -47,36 +55,82 @@ nav {
 }
 
 nav button {
-  font-family: "Gamja Flower";
   font-size: 2rem;
   padding: 5px 10px;
+  background-color: var(--bg-main);
+  color: var(--font-main);
+  border-radius: 20px;
 }
 
-.container,
+nav button:hover {
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#content,
+.card-list,
 .card {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   gap: 20px;
 }
 
-.container {
-  background-color: var(--bg-main);
+#content {
+  background-color: var(--bg-alt);
   width: 750px;
-  /* height: 600px; */
   border-radius: 20px;
   margin: 30px;
+  margin-bottom: auto;
   padding: 40px;
 }
 
+#content h1,
+#content .card {
+  background-color: var(--bg-main);
+  border-radius: 20px;
+  color: var(--font-main);
+}
+
+#content h1 {
+  font-family: "Bagel Fat One";
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+  padding: 10px 20px;
+  line-height: 120%;
+}
+
+.card-list img {
+  width: 100%;
+}
+
 .card {
-  border: 1px solid black;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1.6rem;
   text-align: center;
   margin: 20px;
-  padding: 20px;
+  padding: 20px 40px;
+  width: 90%;
+}
+
+.card div:first-of-type {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .card ul {
   list-style-type: none;
+}
+
+.card ul li {
+  margin: 5px;
 }
