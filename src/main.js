@@ -21,5 +21,5 @@ import "./style.css";
   });
 
   // **** INITIALIZATION ****
-  // menu.render();
+  home.render();
 })();
