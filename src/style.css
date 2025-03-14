@@ -174,5 +174,5 @@ a:visited {
 }
 
 .card a {
-  color: var(--font-alt);
+  color: var(--font-main);
 }
