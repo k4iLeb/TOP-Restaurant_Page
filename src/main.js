@@ -21,7 +21,12 @@ import "./style.css";
     });
   });
 
+  // **** TEST FUNCTION ****
+  function test() {
+    console.log("this is a test function");
+  }
+
   // **** INITIALIZATION ****
   home.render();
-  console.log("trying to fix npm run deploy!!!");
+  test();
 })();
