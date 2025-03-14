@@ -1,3 +1,5 @@
+import { contact } from "./contact";
+
 const home = (() => {
   const obj = {
     title: "Big Fat Burgers",
@@ -19,7 +21,7 @@ const home = (() => {
     },
     location: {
       title: "Location",
-      desc: `See <a href="">contact</a>`,
+      desc: `See `,
     },
   };
 
@@ -47,11 +49,11 @@ const home = (() => {
     const hoursCardTitle = document.createElement("h2");
     hoursCardTitle.textContent = obj.hours.title;
     const hoursCardDescList = document.createElement("ul");
-    hoursCardDescList.innerHTML = obj.hours.desc
-      .map((x) => {
-        return `<li>${x}</li>`;
-      })
-      .join("");
+    obj.hours.desc.forEach((hour) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = hour;
+      hoursCardDescList.append(listItem);
+    });
     hoursCard.append(hoursCardTitle, hoursCardDescList);
 
     const locCard = document.createElement("div");
@@ -59,7 +61,15 @@ const home = (() => {
     const locCardTitle = document.createElement("h2");
     locCardTitle.textContent = obj.location.title;
     const locCardDesc = document.createElement("p");
-    locCardDesc.innerHTML = obj.location.desc;
+    locCardDesc.textContent = obj.location.desc;
+    const locCardDescSpan = document.createElement("a");
+    locCardDescSpan.textContent = "contact";
+    locCardDescSpan.addEventListener("click", () => {
+      contact.render();
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    });
+
+    locCardDesc.append(locCardDescSpan);
     locCard.append(locCardTitle, locCardDesc);
 
     cardContainer.append(aboutCard, hoursCard, locCard);

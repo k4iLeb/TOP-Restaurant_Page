@@ -1,9 +1,3 @@
-// Title
-
-// Category Name
-
-// Cards
-
 import main_Chicken_Cream from "./images/main_Chicken_Cream.png";
 import main_Game_Over from "./images/main_Game_Over.png";
 import main_Koala_Kong from "./images/main_Koala_Kong.png";
@@ -108,10 +102,10 @@ const menu = (() => {
       categoryTitle.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
       category.append(categoryTitle);
       content.append(category);
+      const cardContainer = document.createElement("div");
+      cardContainer.classList.add("card-list");
 
       obj.content[cat].forEach((item) => {
-        const cardContainer = document.createElement("div");
-        cardContainer.classList.add("card-list");
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -132,15 +126,9 @@ const menu = (() => {
         card.append(cardDiv, cardP, cardImg);
         cardContainer.append(card);
         content.append(cardContainer);
-        console.log(item);
       });
     });
-
-    // const test = document.createElement("img");
-    // test.src = sauce_bbq;
   };
-
-  // console.log(obj);
 
   return { render };
 })();

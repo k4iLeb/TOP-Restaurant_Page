@@ -1,3 +1,4 @@
+import { contact } from "./contact";
 import { home } from "./home";
 import { menu } from "./menu";
 import "./style.css";
@@ -8,7 +9,7 @@ import "./style.css";
       render: () => home.render(),
     },
     menu: { render: () => menu.render() },
-    // contact: { render: contact.render() },
+    contact: { render: () => contact.render() },
   };
 
   // **** LISTENERS ****
