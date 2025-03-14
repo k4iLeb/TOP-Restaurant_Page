@@ -23,6 +23,5 @@ import "./style.css";
 
   // **** INITIALIZATION ****
   home.render();
-
-  // test comment
+  console.log("trying to fix npm run deploy!!!");
 })();
