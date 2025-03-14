@@ -10,5 +10,10 @@
   },
   "dependencies": {
     "modern-normalize": "^3.0.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   }
 }
