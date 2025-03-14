@@ -23,5 +23,4 @@ import "./style.css";
 
   // **** INITIALIZATION ****
   home.render();
-  console.log("last check");
 })();

@@ -14,6 +14,6 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "deploy": "git push origin --delete gh-pages && git add -f dist && git commit -m 'Deployment commit' && git subtree push --prefix dist origin gh-pages && git reset --soft HEAD~1"
+    "deploy": "git push origin --delete gh-pages && git add -f dist && git commit -m 'Deployment commit' && git subtree push --prefix dist origin gh-pages && git reset --soft HEAD~1 && git restore --staged ."
   }
 }
