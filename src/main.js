@@ -23,4 +23,6 @@ import "./style.css";
 
   // **** INITIALIZATION ****
   home.render();
+
+  // test comment
 })();
