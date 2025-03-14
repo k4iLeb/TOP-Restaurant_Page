@@ -21,6 +21,11 @@ import "./style.css";
     });
   });
 
+  function test() {
+    console.log("NO EVERYTHING IS NOT UP TO DATE");
+  }
+
   // **** INITIALIZATION ****
   home.render();
+  test();
 })();
